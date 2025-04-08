@@ -4,6 +4,7 @@ export type Media = {
   id: string;
   type: MediaType;
   title: string;
+  subtitle?: string;
   poster: string;
   year: string;
   rated: string;

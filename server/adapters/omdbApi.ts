@@ -48,10 +48,12 @@ export class OMDBApi implements MDBApi {
 }
 
 function adaptMedia(media: Record<string, any>): Media {
+  const splitTitle = media['Title'].split(' - ');
   return {
     id: media['imdbID'],
     type: media['Type'],
-    title: media['Title'],
+    title: splitTitle[0],
+    subtitle: splitTitle[1] ?? null,
     poster: media['Poster'],
     year: media['Year'],
     rated: media['Rated'],

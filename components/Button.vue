@@ -1,10 +1,14 @@
 <script setup lang="ts">
+import type { Component } from 'vue';
+
 interface Props {
+  as?: string | Component;
   variant?: 'primary' | 'secondary';
   size?: 'sm' | 'md' | 'lg';
 }
 
 withDefaults(defineProps<Props>(), {
+  as: 'button',
   variant: 'primary',
   size: 'lg',
 });
@@ -23,7 +27,8 @@ const classVariants = {
 </script>
 
 <template>
-  <button
+  <component
+    :is="as"
     class="flex items-center gap-2 rounded-full font-medium cursor-pointer"
     :class="[
       classVariants.variant[variant],
@@ -31,5 +36,5 @@ const classVariants = {
     ]"
   >
     <slot />
-  </button>
+  </component>
 </template>

@@ -9,9 +9,10 @@ let movie: Media;
 if (movieStore.currentMovie?.id === route.params.id) {
   movie = movieStore.currentMovie;
 } else {
-  console.log(route.params);
   movie = await $fetch(`/api/movies/${route.params.id}`);
 }
+
+movieStore.addToRecentlyViewed(movie);
 </script>
 
 <template>
@@ -27,6 +28,7 @@ if (movieStore.currentMovie?.id === route.params.id) {
         <h1 class="text-[4rem] leading-tight">{{ movie.title }}</h1>
         <Badge class="mt-3 text-sm">{{ movie.rated }}</Badge>
       </div>
+      <h2 v-if="movie.subtitle" class="text-[2rem] leading-tight mb-3">{{ movie.subtitle }}</h2>
       <div class="flex items-center gap-2 text-zinc-300 mb-6">
         <div class="px-1 rounded-sm border border-current font-medium text-sm ml-1">HD</div>
         <p>{{ movie.genre }}</p>
