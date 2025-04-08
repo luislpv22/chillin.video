@@ -2,7 +2,7 @@
 const trendingItems = await $fetch('/api/recommendations/trending');
 const latestMovies = await $fetch('/api/recommendations/trending');
 
-const movieStore = useMovieStore();
+const movieStore = useMediaStore();
 const recentlyViewed = movieStore.recentlyViewed;
 </script>
 

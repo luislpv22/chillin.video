@@ -1,18 +1,25 @@
 <script setup lang="ts">
-import { useMovieStore } from '@/stores/movie';
 import type { Media } from '~/types/media';
 
 const route = useRoute();
-const movieStore = useMovieStore();
+const movieStore = useMediaStore();
 let movie: Media;
 
-if (movieStore.currentMovie?.id === route.params.id) {
-  movie = movieStore.currentMovie;
+if (movieStore.currentMedia?.id === route.params.id) {
+  movie = movieStore.currentMedia;
 } else {
   movie = await $fetch(`/api/movies/${route.params.id}`);
 }
 
 movieStore.addToRecentlyViewed(movie);
+
+const toggleWatchList = () => {
+  if (movieStore.isInWatchList(movie)) {
+    movieStore.removeFromWatchList(movie);
+  } else {
+    movieStore.addToWatchList(movie);
+  }
+};
 </script>
 
 <template>
@@ -51,8 +58,9 @@ movieStore.addToRecentlyViewed(movie);
           <PlayIcon class="w-6 h-6 -ml-2" />
           Watch Now
         </Button>
-        <Button variant="secondary">
-          <HeartLineIcon class="w-6 h-6 -ml-2" />
+        <Button variant="secondary" @click="toggleWatchList">
+          <HeartFillIcon v-if="movieStore.isInWatchList(movie)" class="w-6 h-6 -ml-2" />
+          <HeartLineIcon v-else class="w-6 h-6 -ml-2" />
           Watchlist
         </Button>
       </div>

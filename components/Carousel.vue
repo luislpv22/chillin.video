@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { useMovieStore } from '@/stores/movie';
 import type { Media, MediaType } from '~/types/media';
 
 interface Props {
@@ -10,7 +9,7 @@ interface Props {
 
 defineProps<Props>();
 
-const movieStore = useMovieStore();
+const movieStore = useMediaStore();
 
 const typeRouteMap: Record<MediaType, string> = {
   movie: 'movies',
