@@ -9,6 +9,15 @@
         <Chip>Movies</Chip>
         <Chip>Series</Chip>
       </div>
+      <div class="flex items-center gap-2">
+        <Button variant="secondary" size="sm" icon-only>
+          <SearchIcon class="w-5 h-5" />
+        </Button>
+        <Button variant="secondary" size="sm">
+          <HeartLineIcon class="w-5 h-5" />
+          Watchlist
+        </Button>
+      </div>
     </header>
     <slot />
   </div>

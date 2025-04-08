@@ -13,12 +13,12 @@ const featured = await $fetch('/api/recommendations/featured');
       <h2 v-if="featured[0].subtitle" class="mt-1 text-[2.5rem] text-white leading-tight">{{ featured[0].subtitle }}</h2>
       <div class="mt-8 flex items-center gap-2 pb-12">
         <Button>
-          <svg class="w-6 h-6 -ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M6 20.1957V3.80421C6 3.01878 6.86395 2.53993 7.53 2.95621L20.6432 11.152C21.2699 11.5436 21.2699 12.4563 20.6432 12.848L7.53 21.0437C6.86395 21.46 6 20.9812 6 20.1957Z"></path></svg>
+          <PlayIcon class="w-6 h-6 -ml-2" />
           Watch Now
         </Button>
         <Button :as="NuxtLink" :to="`/movies/${featured[0].id}`" variant="secondary">
           Details
-          <svg class="w-6 h-6 -mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M13.1717 12.0007L8.22192 7.05093L9.63614 5.63672L16.0001 12.0007L9.63614 18.3646L8.22192 16.9504L13.1717 12.0007Z"></path></svg>
+          <AngleRightIcon class="w-6 h-6 -mr-2"/>
         </Button>
       </div>
     </div>

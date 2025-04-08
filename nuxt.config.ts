@@ -8,6 +8,10 @@ export default defineNuxtConfig({
     viewTransition: true,
   },
   modules: ['@nuxt/eslint', '@nuxt/image', '@pinia/nuxt'],
+  components: [{
+    path: '~/components',
+    pathPrefix: false,
+  }],
   css: ['~/assets/css/main.css'],
   vite: {
     plugins: [

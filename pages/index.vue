@@ -8,7 +8,7 @@ const recentlyViewed = movieStore.recentlyViewed;
 
 <template>
   <Hero />
-  <div class="mt-24 px-14 space-y-16 nb-32">
+  <div class="mt-24 px-14 space-y-16 pb-32">
     <ClientOnly>
       <div v-if="recentlyViewed.length">
         <Carousel title="Recently viewed" :items="recentlyViewed" />
