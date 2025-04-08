@@ -24,7 +24,7 @@ const classVariants = {
 
 <template>
   <button
-    class="mt-8 flex items-center gap-2 rounded-full font-medium cursor-pointer"
+    class="flex items-center gap-2 rounded-full font-medium cursor-pointer"
     :class="[
       classVariants.variant[variant],
       classVariants.size[size],

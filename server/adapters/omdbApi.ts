@@ -49,6 +49,8 @@ export class OMDBApi implements MDBApi {
 
 function adaptMedia(media: Record<string, any>): Media {
   return {
+    id: media['imdbID'],
+    type: media['Type'],
     title: media['Title'],
     poster: media['Poster'],
     year: media['Year'],
