@@ -1,7 +1,6 @@
 <script setup lang="ts">
 const featured = await $fetch('/api/recommendations/featured?type=series');
 const trendingItems = await $fetch('/api/recommendations/trending?type=series');
-const latestMovies = await $fetch('/api/recommendations/trending');
 </script>
 
 <template>
