@@ -1,5 +1,7 @@
 # Chillin.video
 
+![Chillin.video screenshot](screenshot.jpg)
+
 ## Design
 Figma: https://www.figma.com/design/4zOl1cxLcx3tQoKmsEAnSL/Chillin-Video-Streaming?node-id=0-1&t=Mkb1r3hRU5prf4lU-1
 
