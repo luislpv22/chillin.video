@@ -1,18 +1,17 @@
 <script setup lang="ts">
 interface Props {
-  selected?: boolean;
+  to: string;
 }
 
-withDefaults(defineProps<Props>(), {
-  selected: false,
-});
+defineProps<Props>();
 </script>
 
 <template>
-  <div
+  <NuxtLink
+    :to="to"
     class="px-4 py-1 rounded-full font-medium cursor-pointer"
-    :class="selected ? 'bg-primary text-black' : 'text-white hover:bg-zinc-800/50 hover:backdrop-blur-xs'"
+    :class="$route.fullPath === to ? 'bg-primary text-black' : 'text-white hover:bg-zinc-950/50 hover:backdrop-blur-xs'"
   >
     <slot />
-  </div>
+  </NuxtLink>
 </template>
