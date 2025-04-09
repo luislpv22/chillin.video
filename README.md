@@ -44,6 +44,7 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 ## Tech stack
 - Vue
 - Nuxt 3
+- Typescript
 - Tailwind CSS
 - Vite
 - Pinia
