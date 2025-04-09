@@ -27,7 +27,7 @@ export const useMediaStore = defineStore('media', {
       }
 
       this.recentlyViewed.unshift(movie);
-      if (this.recentlyViewed.length > 8) {
+      if (this.recentlyViewed.length > 5) {
         this.recentlyViewed.pop();
       }
 
@@ -56,4 +56,4 @@ export const useMediaStore = defineStore('media', {
       }
     }
   }
-})
+});
