@@ -1,41 +1,26 @@
-# Nuxt Minimal Starter
+# Chillin.video
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Design
+Figma: https://www.figma.com/design/4zOl1cxLcx3tQoKmsEAnSL/Chillin-Video-Streaming?node-id=0-1&t=Mkb1r3hRU5prf4lU-1
 
 ## Setup
 
 Make sure to install dependencies:
 
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
+
+Configure environment variables:
+1. Rename `.env.example` to `.env`
+2. Add your `OMDB_API_KEY`
 
 ## Development Server
 
 Start the development server on `http://localhost:3000`:
 
 ```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
 ## Production
@@ -43,33 +28,20 @@ bun run dev
 Build the application for production:
 
 ```bash
-# npm
 npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
 
 Locally preview production build:
 
 ```bash
-# npm
 npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## Tech stack
+- Vue
+- Nuxt 3
+- Tailwind CSS
+- Vite
+- Pinia
